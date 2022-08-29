@@ -1,4 +1,5 @@
 let api = "https://data.covid19india.org/data.json"
+// let api = "https://data.covid19india.org/data.json"
 
 function getData(api) {
   fetch(api)
