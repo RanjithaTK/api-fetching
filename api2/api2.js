@@ -6,6 +6,7 @@ function getData(api) {
     .then((res) => res.json()) //converted to object
     .then((res) => {
       console.log(res)
+      console.log(res.statewise[0].active)
       let i = 1
       let tableData = ""
       res.statewise.map((values) => {
@@ -18,11 +19,9 @@ function getData(api) {
           </tr>`
         i++
         if (values.recovered != 0) {
-            document.getElementById("table_body").innerHTML = tableData
-          }
+          document.getElementById("table_body").innerHTML = tableData
+        }
       })
-
-      
     })
     .catch((err) => console.log(err))
 }
